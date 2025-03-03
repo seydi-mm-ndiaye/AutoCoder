@@ -1,1 +1,16 @@
+name: Workflow Name
+# trigger
+  # Define the event here
+on: push
 
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+      # actions/checkout
+        uses: actions/checkout@v4
+
+      - name: Greeting Message
+      # Write the command here
+        run: echo "Hello, world"
